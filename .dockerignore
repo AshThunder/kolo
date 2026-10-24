@@ -1,0 +1,20 @@
+# Whitelist build context for the Fly server image: ignore everything, then allow only what the server imports.
+*
+!Dockerfile
+!server/package.json
+!server/src/
+!src/network.ts
+!src/addresses.ts
+!src/abi/
+# …and never, even inside the allowed folders
+**/__tests__
+**/*.test.ts
+**/.env
+**/.env.*
+**/*.env
+**/*.key
+**/*.pem
+**/*.json.bak
+**/data
+**/seeds
+**/node_modules

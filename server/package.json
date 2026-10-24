@@ -1,0 +1,6 @@
+{
+  "name": "kolo-server",
+  "private": true,
+  "type": "module",
+  "dependencies": { "hono": "4.13.13", "viem": "2.57.5" }
+}

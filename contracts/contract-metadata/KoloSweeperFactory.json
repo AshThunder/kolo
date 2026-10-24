@@ -1,0 +1,143 @@
+{
+  "contractAddress": "0xc297a34341799d009828d2473ec018ecf3b2bb08",
+  "network": "ARC-TESTNET",
+  "deployerWalletId": "3c2464b2-8369-52e2-a782-800bbeca5396",
+  "contract_code_path": "/home/user/app/contracts/KoloSweeperFactory.sol",
+  "contract_compiled_code_path": "/home/user/app/contracts/out/KoloCctpReceiver.sol/KoloSweeperFactory.json",
+  "contract_network_and_links": {
+    "Arc Testnet": "https://explorer.testnet.arc.io/address/0xc297a34341799d009828d2473ec018ecf3b2bb08"
+  },
+  "contract_deployments": [
+    {
+      "chain": "Arc Testnet",
+      "address": "0xc297a34341799d009828d2473ec018ecf3b2bb08",
+      "explorerUrl": "https://explorer.testnet.arc.io/address/0xc297a34341799d009828d2473ec018ecf3b2bb08",
+      "txHash": "0xc7c3aa893ef88d68cdfe08af9ee10a0cbef22e27710a48b51ebe0607934f6427",
+      "deployedAt": "2026-10-22T19:55:23.158Z"
+    }
+  ],
+  "abi": [
+    {
+      "type": "constructor",
+      "inputs": [
+        {
+          "name": "usdc_",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "computeSweeperAddress",
+      "inputs": [
+        {
+          "name": "pot_",
+          "type": "address",
+          "internalType": "address"
+        },
+        {
+          "name": "contributor_",
+          "type": "address",
+          "internalType": "address"
+        },
+        {
+          "name": "memoHash_",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        },
+        {
+          "name": "saltNonce",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "deploySweeper",
+      "inputs": [
+        {
+          "name": "pot_",
+          "type": "address",
+          "internalType": "address"
+        },
+        {
+          "name": "contributor_",
+          "type": "address",
+          "internalType": "address"
+        },
+        {
+          "name": "memoHash_",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        },
+        {
+          "name": "saltNonce",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "sweeper",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "usdc",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "event",
+      "name": "SweeperDeployed",
+      "inputs": [
+        {
+          "name": "sweeper",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "name": "pot",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "name": "contributor",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "error",
+      "name": "ZeroAddress",
+      "inputs": []
+    }
+  ]
+}

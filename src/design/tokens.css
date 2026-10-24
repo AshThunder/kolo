@@ -1,0 +1,58 @@
+/* Kolo design tokens — ONE theme, no dark mode */
+
+/* Fonts */
+@font-face {
+  font-family: 'Fraunces';
+  src: url('/assets/fonts/fraunces-latin-wght-normal.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter Tight';
+  src: url('/assets/fonts/inter-tight-latin-wght-normal.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url('/assets/fonts/ibm-plex-mono-latin-400-normal.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url('/assets/fonts/ibm-plex-mono-latin-500-normal.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Palette */
+  --ink:        #14172B;
+  --ink-2:      #4A4E63;
+  --ink-3:      #7A7C8A;
+  --paper:      #F6F3EC;
+  --surface:    #FFFFFF;
+  --line:       #E4DED2;
+  --green:      #1F6F5C;
+  --green-deep: #164F42;
+  --green-soft: #DCEBE5;
+  --warn:       #B5562B;
+  --warn-soft:  #F5E3D8;
+  --success:    #2E7D4F;
+  --danger:     #A23A3A;
+
+  /* Radius */
+  --r:  14px;
+  --r2: 20px;
+
+  /* Shadow — one level only */
+  --shadow: 0 1px 0 rgba(20,23,43,.04), 0 8px 24px -12px rgba(20,23,43,.18);
+
+  /* Focus ring */
+  --focus-ring: 0 0 0 2px #fff, 0 0 0 4px var(--green);
+}

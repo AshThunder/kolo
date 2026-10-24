@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><title>Released seal</title>
+<defs><path id="r" d="M60 60m-42 0a42 42 0 1 1 84 0a42 42 0 1 1-84 0"/></defs>
+<g fill="none" stroke="#1F6F5C"><circle cx="60" cy="60" r="54" stroke-width="3"/><circle cx="60" cy="60" r="32" stroke-width="1.5"/></g>
+<text font-family="IBM Plex Mono, monospace" font-size="8" letter-spacing="1.6" fill="#1F6F5C"><textPath href="#r">PAID AS PROMISED · VERIFIED PAYEE · ON ARC ·</textPath></text>
+<path d="M47 61l9 9 17-19" fill="none" stroke="#1F6F5C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>

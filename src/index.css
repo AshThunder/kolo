@@ -1,0 +1,80 @@
+@import './design/tokens.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* { box-sizing: border-box; margin: 0; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Inter Tight', system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100dvh;
+}
+
+/* Eyebrow */
+.eyebrow {
+  font: 500 11px/1 'IBM Plex Mono', monospace;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+/* Mono numerals */
+.num {
+  font-family: 'IBM Plex Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Focus ring */
+:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+}
+
+/* Scrollbar hide */
+.scrollbar-none { scrollbar-width: none; }
+.scrollbar-none::-webkit-scrollbar { display: none; }
+
+/* Sonner toast overrides */
+[data-sonner-toast] {
+  font-family: 'Inter Tight', system-ui, sans-serif !important;
+  border-radius: 12px !important;
+}
+
+/* Pledge bar hatching */
+.pledge-hatch {
+  background: repeating-linear-gradient(
+    135deg,
+    var(--warn-soft) 0 4px,
+    var(--warn-soft) 4px 8px
+  );
+}
+
+/* Skeleton bars — flat, no shimmer */
+.skeleton-bar {
+  background: var(--line);
+  border-radius: 2px;
+  animation: none;
+}
+
+/* Ruled progress bar background */
+.bar-ruled {
+  background: repeating-linear-gradient(90deg, var(--line) 0 1px, transparent 1px 10%), #EFEBE2;
+}
+
+/* Motion: pot fill */
+@media (prefers-reduced-motion: no-preference) {
+  .pot-fill-animate { transition: width 600ms ease-out; }
+  .seal-stamp {
+    animation: stamp-in 180ms ease-out;
+  }
+  @keyframes stamp-in {
+    from { transform: scale(1.08); }
+    to   { transform: scale(1); }
+  }
+}

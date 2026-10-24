@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 420" fill="none" stroke-linecap="round" stroke-linejoin="round"><title>Sealed pot: contributions flow in, one path out to a verified payee</title>
+<g stroke="#14172B" stroke-width="2">
+<path d="M150 70h120"/><path d="M160 70c-55 24-84 72-84 126 0 72 60 124 134 124s134-52 134-124c0-54-29-102-84-126"/>
+<path d="M186 96h48" stroke-width="3"/>
+<clipPath id="c"><path d="M160 70c-55 24-84 72-84 126 0 72 60 124 134 124s134-52 134-124c0-54-29-102-84-126z"/></clipPath>
+<g clip-path="url(#c)" stroke="#E4DED2" stroke-width="1"><path d="M60 140h300M60 164h300M60 188h300M60 212h300M60 236h300M60 260h300M60 284h300M60 308h300"/></g>
+<rect x="76" y="226" width="268" height="100" fill="#DCEBE5" stroke="none" clip-path="url(#c)"/>
+<path d="M78 226h264" stroke="#1F6F5C" stroke-dasharray="4 5"/>
+</g>
+<g stroke="#14172B" stroke-width="2" fill="#F6F3EC"><circle cx="128" cy="24" r="12"/><circle cx="210" cy="14" r="12"/><circle cx="292" cy="24" r="12"/></g>
+<g stroke="#14172B" stroke-width="1.5" stroke-dasharray="3 5"><path d="M134 36l58 56M210 26v62M286 36l-58 56"/></g>
+<circle cx="210" cy="196" r="34" fill="#FFFFFF" stroke="#1F6F5C" stroke-width="2"/>
+<rect x="198" y="194" width="24" height="18" rx="3" fill="#1F6F5C"/><path d="M203 194v-6a7 7 0 0 1 14 0v6" stroke="#1F6F5C" stroke-width="3"/>
+<path d="M210 320v54" stroke="#1F6F5C" stroke-width="2.5"/><path d="M202 366l8 10 8-10" stroke="#1F6F5C" stroke-width="2.5"/>
+<rect x="150" y="384" width="120" height="30" rx="15" fill="#FFFFFF" stroke="#14172B" stroke-width="2"/>
+<path d="M166 399l5 5 9-10" stroke="#1F6F5C" stroke-width="2.5"/><path d="M190 399h62" stroke="#14172B" stroke-width="2"/></svg>
