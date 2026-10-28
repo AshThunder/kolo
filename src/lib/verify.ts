@@ -83,7 +83,7 @@ export async function verifyReceipt(client: PublicClient, chain: string, tx: str
     const payeeId = BigInt(a.payeeId)
     if (payeeId === 0n) {
       const paid = transfers.find(t => t.value === amount && t.from.toLowerCase() === pot)
-      checks.push({ label: paid ? `${formatUsdcExact(amount)} USDC paid out to the pot's named payee` : 'No matching USDC transfer out of the pot', detail: paid ? `to ${shortAddr(getAddress(paid.to))} · this payee is not in the verified registry` : 'The release event has no USDC movement behind it', ok: !!paid })
+      checks.push({ label: paid ? `${formatUsdcExact(amount)} USDC paid out to the pot's fixed payee address` : 'No matching USDC transfer out of the pot', detail: paid ? `to ${shortAddr(getAddress(paid.to))} · a fixed address set when the pot was created (not a registry payee)` : 'The release event has no USDC movement behind it', ok: !!paid })
       return done()
     }
     const info = await client.readContract({ address: KOLO_ADDRESSES.payeeRegistry, abi: PAYEE_REGISTRY_ABI, functionName: 'payeeInfo', args: [payeeId] }) as readonly [number, number, string, string, string, string, bigint, bigint]
