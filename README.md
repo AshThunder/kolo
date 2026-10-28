@@ -205,7 +205,7 @@ flowchart LR
 
 Project: https://studio.arc.io/app/c4df9a2d-d7b1-4471-98f6-10549fb2a886
 
-Arc Studio wrote the Solidity contracts and their Foundry tests (unit, fuzz and invariant), built the Vite and React app around them, ran logic and security review passes, and deployed the first version to Arc Testnet. The mainnet deployment was run from this same source with a Foundry script (`scripts/deploy-mainnet.sh`), because Studio deploys to testnet only. The bytecode on mainnet matches the local build of the Studio contracts. The server, the keeper and the later UI work (create wizard, registrar console, account menu) were built on top of the Studio project.
+Arc Studio wrote the Solidity contracts, the Foundry tests (unit, fuzz and invariant) and the Vite and React app, ran the full test suite in its sandbox, and deployed the first version to Arc Testnet. The same code was then deployed to Arc mainnet with a Foundry script (`scripts/deploy-mainnet.sh`), because Studio deploys to testnet only. The bytecode on mainnet matches the local build of the Studio contracts. Later fixes were also made through Studio sessions: a verified-only payee registry, the admin payee list and the receipt page copy. The server and the keeper were built on top of the Studio project.
 
 ---
 
@@ -253,7 +253,7 @@ Server settings: `ARC_RPC_URL`, `PORT`, `KOLO_CORS_ORIGINS`, `KOLO_START_BLOCK`,
 
 ```bash
 forge test                       # 94 contract tests, including fuzz and invariants
-bun run server:test              # 40 server tests
+bun run server:test              # server tests (49 offline; a few more read live Arc Testnet)
 bun run check                    # lint and typecheck
 ```
 
@@ -281,7 +281,7 @@ The deploy scripts spend real USDC on mainnet. Read them first.
 | Suite | Result |
 |---|---|
 | Foundry contract tests (`forge test`) | **94 / 94 pass** (6 suites: registry, group pot, tuition pot, CCTP, accounting invariants) |
-| Server tests (`bun test server/src/__tests__`) | **40 / 40 pass** |
+| Server tests (`bun test server/src/__tests__`) | **49 / 49 offline tests pass** (payees, security, scan, CCTP). A few more tests read live Arc Testnet and depend on RPC availability. |
 | Mainnet dry run (`DRY_RUN=1 scripts/mainnet-smoke.sh`, local fork of Arc mainnet) | **31 / 31 pass**: a 2-of-2 GroupPot flow and a TuitionPot flow, including contributions, a recurring pull, invoice, approvals, release, close and refunds |
 | Live mainnet demo | 3 pots created and exercised on mainnet, with receipts that verify in the browser |
 | Browser checks (Playwright) | Create wizard, registrar verify flow, log out, and the live pages and receipts all pass with no console errors |
@@ -341,11 +341,11 @@ docs/                  security review
 
 ## Team
 
-_To be filled in at submission._
+Chris Gold, builder. GitHub [AshThunder](https://github.com/AshThunder), X [@ChrisGold__](https://x.com/ChrisGold__).
 
 ## License
 
-_To be confirmed before the repository is published._
+MIT. See [LICENSE](LICENSE).
 
 ## Video
 
