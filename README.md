@@ -9,6 +9,7 @@ Built for Arc Microgrants 2. Live on **Arc mainnet (chain 5042)**.
 | App | https://kolo-arc.vercel.app |
 | API | https://kolo-arc-api.fly.dev/api/kolo (also reachable at https://kolo-arc.vercel.app/api/kolo) |
 | Arc Studio | https://studio.arc.io/app/c4df9a2d-d7b1-4471-98f6-10549fb2a886 |
+| Demo video | https://youtu.be/Lo-YHQRFSg8 |
 | Explorer | https://explorer.arc.io |
 | Source | https://github.com/AshThunder/kolo |
 
@@ -229,7 +230,8 @@ The contracts went through an internal security review with six high-severity fi
 Requirements: [Bun](https://bun.sh) 1.x, [Foundry](https://getfoundry.sh), Node 20+.
 
 ```bash
-bun install
+bun install                      # also fetches OpenZeppelin into node_modules
+forge install foundry-rs/forge-std --no-git   # one time: contracts/tests import forge-std from lib/ (not committed)
 bun run dev                     # Vite dev server, mainnet by default
 ```
 
@@ -347,4 +349,4 @@ _To be confirmed before the repository is published._
 
 ## Video
 
-TODO: walkthrough video link.
+Walkthrough (about 3 minutes): https://youtu.be/Lo-YHQRFSg8
